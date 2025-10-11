@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Tienda <span>Muebles</span>
+        </h1>
+        <div>
+            <nav>
+                <a href="/index.html">Inicio</a>
+                <a href="/nosotros.html">Nosotros</a>
+                <a href="/tienda.html">Tienda</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/galeria.html">Galeria</a>
+                <a href="/contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Contacto</h1>
+        <form>
+            <div>
+                <fieldset>
+                    <legend>TUS DATOS</legend>
+                    <label> <!--Para aplicar estilos mas adelante-->
+                        <label for="nombre">Nombre:</label>
+                        <input id="nombre" type="text" placeholder="Tu nombre"> <br>
+
+                        <label for="asunto">Asunto:</label>
+                        <input id="asunto" type="text" placeholder="Tu Asunto"> <br>
+
+                        <label for="email">E-mail:</label>
+                        <input id="email" type="text" placeholder="Tu Email"> <br>
+
+                        <label for="telefono">Telefono:</label>
+                        <input id="telefono" type="tel" placeholder="Tu Telefono"> <br>
+
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" rows="10" maxlength="500"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>PAÍS</legend>
+                    <div>
+                        <label for="Country">País</label>
+                        <select id="Country">
+                            <option value="No_valido" selected="select">--Seleccione--</option> <!--Por defeccto-->
+                            <option value="Opt_Count_Mexico">México</option>
+                            <option value="Opt_Count_Peru">Perú</option>
+                            <option value="Opt_Count_Colombia">Colombia</option>
+                            <option value="Opt_Count_Argentina">Argentina</option>
+                            <option value="Opt_Count_Espania">España</option>
+                            <option value="Opt_Count_Chile">Chile</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>INFORMACIÓN EXTRA</legend>
+                    <div> <!--Para aplicar estilos mas adelante-->
+                        <label for="Check_InfoE_Cliente">Cliente:
+                            <input id="Check_InfoE_Cliente" type="radio"> <br>
+                        </label>
+                        <label for="Check_InfoE_Proveedor">Proveedor:
+                            <input id="Check_InfoE_Proveedor" type="radio"> <br>
+                        </label>
+                        <label>Categoría de Interés:</label>
+                        <input list="Option_categoria">
+                        <datalist id="Option_categoria">
+                            <option value="Cocina"></option> <!--El value es el atributo que se envia al servidor cuando haces click-->
+                            <option value="Exterior"></option>
+                            <option value="Recamara"></option>
+                            <option value="Oficina"></option>
+                            <option value="Television"></option>
+                        </datalist>
+                    </div>
+                </fieldset>
+
+                <button id="Btn_Enviar_Form" type="submit">
+                    ENVIAR FORMULARIO
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <div class="Categories">
+                <h2>
+                    Categorías
+                </h2>
+                <nav>
+                    <a href="#">Cocina</a>
+                    <a href="#">Oficina</a>
+                    <a href="#">Jardín</a>
+                    <a href="#">Cochera</a>
+                    <a href="#">Dormitorios</a>
+                </nav>
+            </div>
+            <div class="AboutUs">
+                <h2>Sobre Nosotros</h2>
+                <nav>
+                    <a href="#">Nuestra Historia</a>
+                    <a href="#">Misión, Visión y Valores</a>
+                    <a href="#">Carreras</a>
+                    <a href="#">Politica de Privacidad</a>
+                    <a href="#">Terminos de Servicio</a>
+                </nav>
+            </div>
+            <div class="Support">
+                <h2>Soporte</h2>
+                <nav>
+                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="#">Ayuda en línea</a>
+                    <a href="#">Confianza y Seguridad</a>
+                </nav>
+            </div>
+        </div>
+        <p>Todos los derechos Reservados, TiendaMuebles</p>
+    </footer>
+</body>
+</html>
