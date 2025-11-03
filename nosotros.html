@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce</title>
+    <link rel="stylesheet" href="./Styles/index.css">
 </head>
 <body>
     <header>
-        <h1>
+        <h1 class="site-name">
             Tienda <span>Muebles</span>
         </h1>
-        <div>
-            <nav>
+
+        <div class="navigation-container">
+            <nav class="nav-main container">
                 <a href="./index.html">Inicio</a>
                 <a href="./nosotros.html">Nosotros</a>
                 <a href="./tienda.html">Tienda</a>
@@ -21,16 +23,15 @@
             </nav>
         </div>
     </header>
-
-    <hr>
     
-    <main>
+    <main class="ourProducts">
         <section>
-            <h2>
-                Sobre Nosotros
-            </h2>
-            <div>
-                <img src="./img/nosotros.jpg" alt="">
+        <h2 class="header-ourProducts">
+            Sobre Nosotros
+        </h2>
+        <div class="contenido-nosotros">
+            <img src="./img/nosotros.jpg" alt="">
+            <div class="information">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores debitis quis consectetur animi beatae mollitia itaque ea dicta eos. Totam repellat temporibus autem aspernatur necessitatibus perspiciatis ea iste laborum ipsum!
                 </p>
@@ -38,16 +39,17 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores debitis quis consectetur animi beatae mollitia itaque ea dicta eos. Totam repellat temporibus autem aspernatur necessitatibus perspiciatis ea iste laborum ipsum!
                 </p>
             </div>
+        </div>
         </section>
     </main>
 
-    <footer>
-        <div>
-            <div class="Categories">
+    <footer class="footer">
+        <div class="grid-footer">
+            <div>
                 <h2>
                     Categorías
                 </h2>
-                <nav>
+                <nav class="footer-menu">
                     <a href="#">Cocina</a>
                     <a href="#">Oficina</a>
                     <a href="#">Jardín</a>
@@ -55,9 +57,9 @@
                     <a href="#">Dormitorios</a>
                 </nav>
             </div>
-            <div class="AboutUs">
+            <div>
                 <h2>Sobre Nosotros</h2>
-                <nav>
+                <nav class="footer-menu">
                     <a href="#">Nuestra Historia</a>
                     <a href="#">Misión, Visión y Valores</a>
                     <a href="#">Carreras</a>
@@ -65,16 +67,16 @@
                     <a href="#">Terminos de Servicio</a>
                 </nav>
             </div>
-            <div class="Support">
+            <div>
                 <h2>Soporte</h2>
-                <nav>
+                <nav class="footer-menu">
                     <a href="#">Preguntas Frecuentes</a>
                     <a href="#">Ayuda en línea</a>
                     <a href="#">Confianza y Seguridad</a>
                 </nav>
             </div>
         </div>
-        <p>Todos los derechos Reservados, TiendaMuebles</p>
+        <p class="copyright">Todos los derechos Reservados, TiendaMuebles</p>
     </footer>
 </body>
 </html>

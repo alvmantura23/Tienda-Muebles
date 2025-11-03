@@ -1,0 +1,515 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1REM = 10px */
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/* Globales */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  margin: 0 0 2rem 0;
+}
+h1 {
+  font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.categories {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.button {
+  background-color: #8cbc00;
+  display: inline-block; /* ✅ cambia de block a inline-block */
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem 2rem; /* un poco más de espacio horizontal */
+  transition: background-color 0.3s ease-out;
+  text-align: center;
+  border: none;
+  margin: 1rem auto; /* ✅ centra el botón */
+}
+
+.site-name{
+    margin-top: 5rem;
+    text-align: center;
+}
+.site-name span {
+  color: #037bc0;
+}
+
+/*Para el menu de navegacion*/
+.navigation-container{
+     border-top: 0.1rem solid #e1e1e1;
+}
+
+.image-div{
+    background-image: url("../img/principal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 55rem;
+}
+
+@media(min-width: 720px){
+    .image-div{
+        height: 55rem;
+    }
+}
+
+.nav-main{
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 720px) {
+    .nav-main{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+
+/*Para la seccion de categorias*/
+.categories{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.header-categories{
+    text-align: center;
+}
+.all-categories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.category{
+    margin-bottom: 2rem;
+}
+.category img {
+    width: 100%;
+}
+.category a { /*nombre de la clase y la etiqueta perteneciente*/
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+
+}
+.category a:hover {
+    background-color: #0337c0;
+    color: #ffffff;
+    border-bottom-right-radius: 1rem;
+}
+
+
+/*Seccion Nosotros*/
+.aboutUs{
+    background-image: linear-gradient(to bottom, transparent 50%, #037bc0 10%, #037bc0 100%), url("../img/nosotros.jpg");
+    background-position: center, top left;
+    background-size: 100%, 75rem;
+}
+@media (min-width: 720px){
+    .aboutUs{
+        background-image: linear-gradient(to right, transparent 50%, #037bc0 10%, #037bc0 100%), url("../img/nosotros.jpg");
+        background-position: left center;
+        padding: 10rem 0;
+        background-size: 100%, 160rem;
+    }
+}
+.aboutUs-grid{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+@media (min-width: 720px){
+    .aboutUs-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: unset;
+        column-gap: 10rem;
+    }
+}
+.aboutUs-text{
+    grid-row: 2/3;
+    color: #fff;
+    padding: 5rem;
+}
+@media (min-width: 720px){
+    .aboutUs-text{
+        grid-column: 2/3;
+    }
+}
+
+/*Seccion Nuestros productos*/
+.ourProducts {
+  padding-top: 5rem;
+}
+
+.header-ourProducts{
+    text-align: center;
+}
+@media (min-width: 720px) {
+  .list-ourProducts {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+  }
+
+  .product:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .product:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .product:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .product:nth-child(2) img,
+  .product:nth-child(3) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .product:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+  }
+
+  .product:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .product:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .product:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+}
+
+.product {
+  background-color: #037bc0;
+  margin-bottom: 2rem;
+}
+
+
+@media (min-width: 720px) {
+  .product {
+    margin-bottom: 0;
+  }
+}
+
+.product:last-of-type {
+  margin-bottom: 0;
+}
+
+.product-content {
+  text-align: center;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.product-content h3 {
+  margin: 0;
+}
+
+.product-content p {
+  margin: 0 0 0.5rem 0;
+}
+
+.product-content .price {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+
+.button {
+  background-color: #8cbc00;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  transition: background-color 0.3s ease-out;
+  text-align: center;
+  border: none;
+  width: 100%;
+}
+
+
+
+@media (min-width: 720px) {
+  .button {
+    width: auto;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .max-width-30 {
+    max-width: 30rem;
+  }
+}
+
+
+/**Footer**/
+.footer {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 5rem;
+  padding-top: 5rem;
+}
+
+.footer h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .footer h2 {
+    text-align: left;
+  }
+
+  .grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.grid-footer > div {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-footer > div {
+    margin: 0;
+  }
+}
+
+.footer-menu a {
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-menu a {
+    text-align: left;
+  }
+}
+
+.copyright {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+
+
+/**Opcion Nosotros**/
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 4rem;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+}
+
+@media (min-width: 768px) {
+  .information {
+    padding: 0;
+  }
+}
+
+/*Opcion blog*/
+@media (min-width: 720px) {
+  .blog-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+  }
+}
+
+.entrada {
+  border-bottom: 2px solid #e1e1e1;
+  margin-bottom: 2rem;
+  padding-bottom: 4rem;
+}
+
+.entrada h2 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .entrada h2 {
+    text-align: left;
+  }
+}
+
+.contenido-blog {
+  padding: 2rem;
+}
+
+.entrada:last-of-type {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .entrada-meta {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.entrada-meta p {
+  font-weight: bold;
+}
+
+.entrada-meta span {
+  color: #037bc0;
+}
+
+.contenido-entrada-blog {
+  width: 60rem;
+  margin: 0 auto;
+}
+
+aside {
+  margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+  aside {
+    margin-left: 0;
+  }
+}
+
+/*Seccion galeria*/
+.galeria {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 720px) {
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.galeria img {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+}
+
+/*El formulario*/
+
+.formulario {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.formulario fieldset {
+  border: 1px solid black;
+  margin-bottom: 2rem;
+}
+
+.formulario legend {
+  background-color: #005485;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase; /*bueno yo ya los habia escrito en mayuscula :v*/
+  font-weight: 900;
+  padding: 1rem;
+  margin-bottom: 4rem;
+}
+
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.campo label {
+  flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select {
+  flex: 1;
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+}
